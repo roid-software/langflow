@@ -36,4 +36,4 @@ jobs:
 
       - name: Output pushed image
         run: |
-        echo "Pushed Image: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${SHA7}"
+          echo "Pushed Image: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${SHA7}"
