@@ -122,7 +122,7 @@ class Settings(BaseSettings):
     download_webhook_url: str | None = "https://api.langflow.store/flows/trigger/ec611a61-8460-4438-b187-a4f65e5559d4"
     like_webhook_url: str | None = "https://api.langflow.store/flows/trigger/64275852-ec00-45c1-984e-3bff814732da"
 
-    storage_type: str = "local"
+    storage_type: str = "s3"
 
     celery_enabled: bool = False
 
@@ -144,7 +144,7 @@ class Settings(BaseSettings):
     """If set to True, Langflow will not serve the frontend."""
 
     # Telemetry
-    do_not_track: bool = False
+    do_not_track: bool = True
     """If set to True, Langflow will not track telemetry."""
     telemetry_base_url: str = "https://langflow.gateway.scarf.sh"
     transactions_storage_enabled: bool = True
