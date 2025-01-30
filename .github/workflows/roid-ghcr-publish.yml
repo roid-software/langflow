@@ -31,7 +31,7 @@ jobs:
           IMAGE_NAME="ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}"
           TAG="${IMAGE_NAME}:${SHA7}"
 
-          docker build -f build_and_push.Dockerfile -t $TAG .
+          docker build -f docker/build_and_push.Dockerfile -t $TAG .
           docker push $TAG
 
       - name: Output pushed image
