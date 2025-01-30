@@ -33,6 +33,7 @@ jobs:
 
           docker build -f docker/build_and_push.Dockerfile -t $TAG .
           docker push $TAG
+          docker push $IMAGE_NAME:latest
 
       - name: Output pushed image
         run: |
